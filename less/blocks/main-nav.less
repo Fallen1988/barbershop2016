@@ -1,0 +1,60 @@
+@import "../veriables";
+@import "../mixin";
+
+.main-nav {
+  width: 320px;
+  margin: 0 auto;
+  background: yellow;
+}
+
+.main-nav__items,
+.main-nav__user-items {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__items {
+  min-height: 255px;  // тимчасово для сітки
+}
+
+.main-nav__items {
+  min-height: 55px;  // тимчасово для сітки
+}
+
+@media @tablet-widths {
+
+  .main-nav {
+    width: auto;
+    min-height: 70px;
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    .container();
+    .clearfix();
+  }
+
+  .main-nav__items {
+    float: left;
+    width: 570px;
+    min-height: 70px;  // тимчасово для сітки
+  }
+
+  .main-nav__items {
+    float: right;
+    width: 60px;
+    min-height: 70px;  // тимчасово для сітки
+  }
+}
+
+@media @desktop-widths {
+  .main-nav__items {
+    width: 780px;
+  }
+
+  .main-nav__items {
+    width: 160px;
+  }
+}
