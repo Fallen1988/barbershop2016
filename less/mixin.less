@@ -20,6 +20,17 @@
   }
 }
 
+// З флекс
+.container-fluid {
+  width: auto;
+
+  @media @tablet-widths {
+    width: 84%;               /* 640 / 768 = 84*/
+    max-width: 960px;         /* 960 / 0.84 = 1142px центровка почнеться чуть раньше 1200px*/
+    margin: 0 auto;
+  }
+}
+
 .no-outline() {
   outline: none;
   background: transparent;

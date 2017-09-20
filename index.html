@@ -13,19 +13,25 @@
     <h1 class="visually-hidden">Барбершоп "Бородинский" - истинно мужская класика</h1>
 
     <div class="page-header__logo">
-        <img src="" width="370" height="153" alt="Барбершоп 'Бородинский'">
+        <picture>
+            <source media="(min-width: 1200px)"
+                    srcset="img/logotype-desktop.svg">
+            <source media="(min-width: 768px)"
+                    srcset="img/logotype-tablet.svg">
+            <img src="img/logotype-mobile.svg" width="370" height="153" alt="Барбершоп Бородинский">
+        </picture>
     </div>
 
-    <nav class="main-nav  main-nav--closed  main-nav--nojs">
+    <nav class="main-nav  main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">Відкрити меню</button>
 
         <div class="main-nav__wrapper">
             <ul class="main-nav__items">
-                <li class="main-nav__item  main-nav__item active"><a href="">Головна</a> </li>
-                <li class="main-nav__item"><a href="">Наші роботи</a> </li>
+                <li class="main-nav__item"><a>Головна</a> </li>
+                <li class="main-nav__item    main-nav__item--active"><a href="">Наші роботи</a> </li>
                 <li class="main-nav__item"><a href="">Записатись</a> </li>
                 <li class="main-nav__item"><a href="">Контакти</a> </li>
-                <li class="main-nav__item"><a href="">HTML Academy</a> </li>
+
             </ul>
 
             <ul class="main-nav__user-items">
@@ -51,19 +57,19 @@
 
         <table class="stats__items">
             <tr>
-                <td class="stats__value">1*500<sup>*</sup></td>
+                <td class="stats__value">1 500<sup>*</sup></td>
                 <td class="stats__field">рублів<br> вложень</td>
             </tr>
             <tr>
-                <td class="stats__value">7*200<sup>*</sup></td>
+                <td class="stats__value">7 200<sup></sup></td>
                 <td class="stats__field">секунд<br> часу майстера</td>
             </tr>
             <tr>
-                <td class="stats__value">90*000<sup>*</sup></td>
+                <td class="stats__value">90 000<sup></sup></td>
                 <td class="stats__field">підстриженого<br> волосся</td>
             </tr>
             <tr>
-                <td class="stats__value">500*000<sup>*</sup></td>
+                <td class="stats__value">500 000<sup>*</sup></td>
                 <td class="stats__field">лайків<br> і компліментів</td>
             </tr>
         </table>
@@ -222,5 +228,22 @@
     </div>
 
 </footer>
+
+<script>
+    var navMain = document.querySelector(".main-nav");
+    var navToggle = document.querySelector(".main-nav__toggle");
+
+    navMain.classList.remove("main-nav--nojs");
+
+    navToggle.addEventListener("click", function () {
+        if (navMain.classList.contains("main-nav--closed")) {
+            navMain.classList.remove("main-nav--closed");
+            navMain.classList.add("main-nav--opened");
+        } else {
+            navMain.classList.add("main-nav--closed");
+            navMain.classList.remove("main-nav--opened");
+        }
+    });
+</script>
 </body>
 </html>
